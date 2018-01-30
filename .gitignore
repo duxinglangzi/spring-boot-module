@@ -28,7 +28,7 @@ local.properties
 .classpath
 
 # target files
-/target/
+target/
 
 # Package Files #
 *.jar

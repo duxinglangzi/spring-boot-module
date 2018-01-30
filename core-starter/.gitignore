@@ -3,8 +3,8 @@
 *.class
 
 # Log file
-/log/
-/logs/
+log/
+logs/
 *.log
 
 
@@ -28,7 +28,7 @@ local.properties
 .classpath
 
 # target files
-/target/
+target/
 
 # Package Files #
 *.jar
