@@ -3,8 +3,8 @@
 *.class
 
 # Log file
-/log/
-/logs/
+log/
+logs/
 *.log
 
 
