@@ -1,4 +1,4 @@
-package common.utils;
+package com.andy.common.utils;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

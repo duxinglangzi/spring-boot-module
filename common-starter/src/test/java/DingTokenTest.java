@@ -1,7 +1,5 @@
-import common.https.LocalHttpClient;
+import com.andy.common.https.LocalHttpClient;
 import junit.framework.TestCase;
-import lombok.extern.log4j.Log4j;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -17,8 +15,8 @@ import java.io.IOException;
  * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2018/1/31 20:00 </p>
  */
-@Log4j
-public class DingTokenTest extends TestCase{
+@Slf4j
+public class DingTokenTest extends TestCase {
     public static final String corpid = "ding0fbecc7ad8833f17";
     public static final String corpsecret = "sGBDXzcMYIba-bFu4XBI2vvxlHzLlBgzNrY0Hb5Sr75IGcWmIHyBePjZoho6c3Kbu";
 
@@ -48,7 +46,7 @@ public class DingTokenTest extends TestCase{
 
 
     //2、获取部门列表
-    public void test_get_scopes(){
+    public void test_get_scopes() {
         HttpUriRequest httpUriRequest = RequestBuilder.get()
                 .setUri("https://oapi.dingtalk.com/department/list")
                 .addParameter("access_token", accessToken)

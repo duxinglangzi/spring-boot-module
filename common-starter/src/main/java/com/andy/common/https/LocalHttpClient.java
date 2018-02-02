@@ -1,4 +1,4 @@
-package common.https;
+package com.andy.common.https;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -20,7 +20,7 @@ public class LocalHttpClient {
      * @return         Class类对象
      */
     public static <T> T executeJSONResult(HttpUriRequest request, Class<T> clazz){
-        return execute(request,JSONResponseHandler.createResponseHandler(clazz));
+        return execute(request, JSONResponseHandler.createResponseHandler(clazz));
     }
 
     /**

@@ -1,4 +1,4 @@
-package common.https;
+package com.andy.common.https;
 
 import org.apache.http.conn.HttpClientConnectionManager;
 

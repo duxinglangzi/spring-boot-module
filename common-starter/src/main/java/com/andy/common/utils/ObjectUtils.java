@@ -1,4 +1,4 @@
-package common.utils;
+package com.andy.common.utils;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
