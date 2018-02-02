@@ -10,7 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>@author wuqiong  2018/2/1 19:14 </p>
  */
 @SpringBootApplication
-@FrameworkAnnotaion(propertySourceLocations = "classpath:/bootstrap.properties")
+@FrameworkAnnotaion(
+        propertySourceValue = {"classpath:/bootstrap.properties"},
+        componentScanPackages = {"com.andy"}
+)
 public class Application {
 
 

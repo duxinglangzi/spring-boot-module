@@ -1,5 +1,6 @@
 package com.andy.core.annotation;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.annotation.AliasFor;
 
@@ -9,7 +10,27 @@ import org.springframework.core.annotation.AliasFor;
  * <p>@author wuqiong  2018/2/2 15:00 </p>
  */
 @PropertySource(value = {})
+@ComponentScan
 public @interface FrameworkAnnotaion {
+
+    /**
+     * 组件扫描包路径{@link ComponentScan#basePackages()}
+     *
+     * @return String[]
+     *
+     */
+    @AliasFor(annotation = ComponentScan.class, attribute = "basePackages")
+    String[] componentScanPackages() default {};
+
+    /**
+     * 组件扫描类路径{@link ComponentScan#basePackageClasses()}
+     *
+     * @return Class&lt;?&gt;[]
+     *
+     */
+    @AliasFor(annotation = ComponentScan.class, attribute = "basePackageClasses")
+    Class<?>[] componentScanPackageClasses() default {};
+
 
     /**
      * 按资源名称加载环境配置{@link PropertySource#name()}
@@ -27,6 +48,6 @@ public @interface FrameworkAnnotaion {
      *
      */
     @AliasFor(annotation = PropertySource.class, attribute = "value")
-    String[] propertySourceLocations();
+    String[] propertySourceValue();
 
 }
