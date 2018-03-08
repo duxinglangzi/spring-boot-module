@@ -16,12 +16,18 @@ import java.io.IOException;
 
 public final class HttpClientFactory {
 
-    private static final Integer MAX_TOTAL = 300;             //连接池最大连接数
-    private static final Integer MAX_PER_ROUTE = 50;          //单个路由默认最大连接数
-    private static final Integer REQ_TIMEOUT =  5 * 1000;     //请求超时时间ms
-    private static final Integer CONN_TIMEOUT = 5 * 1000;     //连接超时时间ms
-    private static final Integer SOCK_TIMEOUT = 10 * 1000;    //读取超时时间ms
-    private static HttpClientConnectionMonitorThread thread;  //HTTP链接管理器线程
+    /** 连接池最大连接数 **/
+    private static final Integer MAX_TOTAL = 300;
+    /** 单个路由默认最大连接数  httpClient 官方强烈推荐最大数不能超过20  **/
+    private static final Integer MAX_PER_ROUTE = 20;
+    /** 请求超时时间ms **/
+    private static final Integer REQ_TIMEOUT =  5 * 1000;
+    /** 连接超时时间ms **/
+    private static final Integer CONN_TIMEOUT = 5 * 1000;
+    /** 读取超时时间ms **/
+    private static final Integer SOCK_TIMEOUT = 10 * 1000;
+    /** HTTP链接管理器线程 **/
+    private static HttpClientConnectionMonitorThread thread;
 
     public static HttpClientConnectionMonitorThread getThread() {
         return thread;

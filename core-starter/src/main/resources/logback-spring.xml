@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
-    <include resource="com/yazuo/framework/core/logging/yazuo-logging-base.xml"/>
+    <include resource="com/andy/core/logging/file-appender.xml"/>
+    <include resource="com/andy/core/logging/andy-logging-base.xml"/>
+    <include resource="com/andy/core/logging/sql-logging-file-appender.xml"/>
 
     <!-- 关联appender到项目 -->
-    <logger name="com.yazuo" level="INFO" additivity="false">
+    <logger name="com.andy" level="INFO" additivity="false">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE" />
     </logger>
