@@ -10,9 +10,7 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
 /**
- * <p>ClassName:  </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2018/1/31 20:00 </p>
  */
 @Slf4j
